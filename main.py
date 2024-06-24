@@ -6,6 +6,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 import time
 import tajne
 import requests
+import client
 
 options = webdriver.ChromeOptions()
 options.add_experimental_option("useAutomationExtension", False) # zmniejsza ilosc logów generwoancyh
@@ -32,11 +33,11 @@ driver.get("https://pl.grepolis.com/")
 try:
     imput_login = driver.find_element(By.ID, "login_userid")
     imput_login.clear()
-    imput_login.send_keys(tajne.login)
+    imput_login.send_keys(tajne.login)#tajne.login
     time.sleep(2)
     imput_password = driver.find_element(By.ID, "login_password")
     imput_password.clear()
-    imput_password.send_keys(tajne.password + Keys.ENTER)
+    imput_password.send_keys(tajne.password + Keys.ENTER)#tajne.password
     time.sleep(2)
     world = driver.find_element(By.XPATH, '//*[@id="worlds"]/div/ul/li[1]/div')
     world.click()

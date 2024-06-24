@@ -1,0 +1,14 @@
+Czekanie i sprawdzanie:
+wait = WebDriverWait(driver, 10)
+element = wait.until(EC.element_to_be_clickable((By.XPATH, "/html/body/div[2]/div[2]/div[3]/span/div/div/div/div[3]/div[1]/button[1]/div")))
+element.click()
++ try, except
+
+try:
+    element = WebDriverWait(driver, 5).until(
+        EC.element_to_be_clickable((By.XPATH, "/html/body/div[2]/div[2]/div[3]/span/div/div/div/div[3]/div[1]/button[1]/div"))
+    )
+    element.click()
+except:
+    print("Nie znaleziono podanego elementu")
+
