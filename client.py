@@ -1,3 +1,4 @@
+'''
 from tkinter import *
 
 
@@ -31,4 +32,4 @@ inputPassword = Entry(page, textvariable=textPassword, show="*").pack()
 
 buttonLogin = Button(page, text="Login", command=login).pack()
 
-page.mainloop()
+page.mainloop()'''
